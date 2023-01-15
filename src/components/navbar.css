@@ -1,14 +1,16 @@
 nav {
   margin: 1rem;
   height: 5rem;
-  width: 100vw;
+  left: 10px;
+  right: 10px;
   background: rgba(0, 0, 0, 0.167);
-  display: grid;
+  display: flex;
   place-items: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
+  border-radius: 40px;
 }
 
 /* shows only on medium and small screens 
@@ -23,4 +25,33 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+.btn {
+  display: flex;
+  gap: 1rem;
+}
+.title {
+  font-size: 20px;
+  
+}
+.logo1 {
+  height: 33px;
+  margin-top: 1px;
+}
+.logo2 {
+  height: 30px;
+  margin-top: 0px;
+  
+}
+.logo3 {
+  height: 36px;
+  margin-top: -5px;
+}
+
+
+.nav_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.5rem;
 }

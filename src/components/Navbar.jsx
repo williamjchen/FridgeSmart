@@ -10,18 +10,19 @@ const Navbar = () => {
   return (
     <nav>
       <div className="container nav_container">
-        <Link to="/" className='logo'>
+        <Link to="/" className='title'>
           <p> FridgeSmart</p>
         </Link>
         <ul className='nav_links'>
         <li>
-            <NavLink to='./pages/recipes'><a href="" className="btn1"><img className="logo1"src={Icon1}/>Home</a></NavLink>
+            <NavLink to='./pages/recipes'><a href="" className="btn"><img className="logo1"src={Icon1}/><p>Home</p></a></NavLink>
+            
           </li>
           <li>
-            <NavLink to='./pages/recipes'><a href="" className="btn2"><img className="logo2"src={Icon2}/>Recipe</a></NavLink>
+            <NavLink to='./pages/recipes'><a href="" className="btn"><img className="logo2" src={Icon2}/><p>Upload Image</p></a></NavLink>
           </li>
           <li>
-            <NavLink to='./pages/recipes'><a href="" className="btn1"><img className="logo1"src={Icon3}/>Recipe</a></NavLink>
+            <NavLink to='./pages/recipes'><a href="" className="btn"><img className="logo3"src={Icon3}/><p className="header">Recipe</p></a></NavLink>
           </li>
         </ul>
 
