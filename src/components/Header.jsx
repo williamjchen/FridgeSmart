@@ -1,5 +1,8 @@
 import {Link} from 'react-router-dom'
-import Image from '../images/robot.png'
+import Image1 from '../images/plate.png'
+import Image2 from '../images/robot.png'
+import './header.css'
+
 const Header = () => {
   return (
     <header className="main_header">
@@ -9,8 +12,8 @@ const Header = () => {
         </p>  
       </div>
       <div className="main_header-right">
-        <div className="main_header-plate"> </div>
-        <div className="main_header-image"> <img src={Image} alt=""/>
+        <div className="main_header-plate"> <img src={Image1} alt=""/></div>
+        <div className="main_header-image"> <img src={Image2} alt=""/>
         </div>
       </div>
     </header>

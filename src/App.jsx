@@ -11,7 +11,6 @@ import Header from './components/Header'
 const app = () => {
   return (
     <BrowserRouter>
-      <Background/>
       <Navbar/>
       <Header/>
       <Upload/>
