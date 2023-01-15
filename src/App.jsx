@@ -10,7 +10,7 @@ const app = () => {
   return (
     <BrowserRouter>
       <Navbar/>
-      <Recipe/>
+      
     </BrowserRouter>
 
     
