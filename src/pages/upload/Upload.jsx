@@ -2,6 +2,7 @@ import './upload.css'
 import axios from 'axios'
 import { useState } from 'react'
 import Recipes from '../recipes/Recipes'
+import Fridge  from '../../components/Fridge'
 
 //import fs from 'fs'
 
@@ -34,6 +35,9 @@ const Upload = () => {
   return (
     <div className="upload-comp">
       <button onClick={processImage}>upload</button>
+      <div className='fridge'>
+      <Fridge/>
+      </div>
       {RecipesList}
     </div>
   )

@@ -3,3 +3,12 @@
   height: 1080px;
 
 }
+
+.fridge {
+  margin-top: 30%;
+  max-width: 30%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+}
