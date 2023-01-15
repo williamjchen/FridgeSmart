@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-secondary: #F8D3A3;
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+  --transition: all 500ms ease;
+}
+
 body {
-  background: var(hex(E3AE85))
+  background-color: #E3AE85;
 }
