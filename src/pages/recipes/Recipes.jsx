@@ -1,26 +1,33 @@
 import Recipe from './Recipe';
 import axios from 'axios';
-
-const fetchRecipe = () => {
-  let ingredients = ["apples", "flour", "sugar", "baking powder", "spices", "milk", "egg"]
-  let numResults = 2
-
-  let url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients.join(",+")}&number=${numResults}&sort=min-missing-ingredients&apiKey=${process.env.REACT_APP_SPOON_API_KEY}`
-  axios.get(url)
-      .then(res => {
-        const data = res.data
-        console.log(data)
-      })
-}
+import { useState, useEffect } from 'react';
 
 const Recipes = ({ingredients}) => {
+  const [RecipesList, setRecipesList] = useState([]);
+
+  useEffect(() => {
+    fetchRecipe(ingredients)
+  })
+
+  const fetchRecipe = (ingredients) => {
+    let numResults = 2
+  
+    let url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients.join(",+")}&number=${numResults}&sort=min-missing-ingredients&apiKey=${process.env.REACT_APP_SPOON_API_KEY}`
+    axios.get(url)
+        .then(res => {
+          const data = res.data
+          console.log(data)
+          setRecipesList(data)
+        })
+  }  
+  
   return (
     <div>
-      {ingredients.map(i => (
+      {RecipesList.map(i => (
         <Recipe 
-            name={i.name} 
-            have={i.have}
-            missing={i.missing}
+            name={i.title} 
+            have={i.usedIngredients}
+            missing={i.unusedIngredients}
         />
     ))}
     </div>
