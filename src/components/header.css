@@ -6,5 +6,60 @@
   display: grid;
   place-items: center;
   
+}
+
+.main_header-container {
+  height: 100%;
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6rem;
+}
+
+.main_header-left {
+  margin-top: -4rem;
+  margin-left: 2.5rem;
+}
+.main_header-left p {
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+.introducing {
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+.fridgesmart {
+  margin-bottom: 1rem;
+}
+
+.main_header-right {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.plate {
+  height: 3rem;
+  z-index: 10;
+  position: relative;
+  left: 100px;
+  bottom: 60px;
 
 }
+.robot {
+  min-width: 16.36rem;
+  height: 17.44rem;
+  z-index: 8;
+  margin-top: 6rem;
+}
+.main_header-plate {
+  position: relative;
+  
+}
+.main_header-image {
+  position: absolute;
+  
+}
+
+
