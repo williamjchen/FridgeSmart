@@ -18,6 +18,7 @@ const Recipes = ({ingredients}) => {
           const data = res.data
           console.log(data)
           setRecipesList(data)
+          console.log("hi")
         })
   }  
   
