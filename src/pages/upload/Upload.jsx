@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import Recipes from '../recipes/Recipes'
 import Fridge  from '../../components/Fridge'
+import message from "../../images/arcade-font-writer-7.png"
 
 //import fs from 'fs'
 
@@ -54,13 +55,23 @@ const Upload = () => {
   }
 
   return (
+    <div>
+    <div><img src={message} className="message"/></div>
     <div className="upload-comp">
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={processImage}>upload</button>
-      <div className='fridge'>
+      <div className='fridge' for="fileinput" onClick={processImage} style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '60vh',
+            scale: '250%',
+        }}>
       <Fridge/>
       </div>
+      <label for="file-input" className='filelabel'>
+    choose file to upload</label>
+      <input type="file" id='file-input' onChange={handleFileChange} />
       {RecipesList}
+    </div>
     </div>
   )
 }
