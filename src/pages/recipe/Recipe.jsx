@@ -1,9 +1,14 @@
 import './recipe.css'
 
+
+const fetchRecipe = () => {
+  console.log(process.env.REACT_APP_SPOON_API_KEY)
+}
+
 const Recipe = () => {
   return (
     <div>
-      recipe
+      <button onClick={fetchRecipe}>hmm</button>
     </div>
   )
 }
