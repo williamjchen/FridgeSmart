@@ -32,7 +32,7 @@ const Upload = () => {
   }
 
   return (
-    <div className="upload">
+    <div className="upload-comp">
       <button onClick={processImage}>upload</button>
       {RecipesList}
     </div>
