@@ -1,12 +1,16 @@
 import './upload.css'
 import axios from 'axios'
-import { useState } from 'react';
-import Recipes from '../recipes/Recipes';
+import { useState } from 'react'
+import Recipes from '../recipes/Recipes'
 
 //import fs from 'fs'
 
+const Input = () => {
+  return <input placeholder="Your input here" />;
+};
+
 const Upload = () => {
-  const [Recipes, setRecipes] = useState([]);
+  const [RecipesList, setRecipesList] = useState([]);
 
   const processImage = () => {
     // const image = fs.readFileSync("YOUR_IMAGE.jpg", {
@@ -23,8 +27,8 @@ const Upload = () => {
     .then(function(response) {
       let ingredients = []
       response.data.predictions.map((prediction) => (ingredients.push(prediction.class)))
-      setRecipes(Recipes.concat(<Recipes ingredients={ingredients}/>))
       console.log(ingredients)
+      setRecipesList(RecipesList.concat(<Recipes ingredients={ingredients}/>))
     })
     .catch(function(error) {
         console.log(error.message);
@@ -34,7 +38,7 @@ const Upload = () => {
   return (
     <div>
       <button onClick={processImage}>upload</button>
-      {Recipes}
+      {RecipesList}
     </div>
   )
 }
