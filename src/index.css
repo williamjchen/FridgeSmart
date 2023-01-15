@@ -17,4 +17,28 @@
 
 body {
   background-color: #E3AE85;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  
 }
+
+.container {
+  width: var(--container-width-lg);
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+h1, h2, h3, h4, h6 {
+  line-heart: 1.2;
+  color: var(white);
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 3rem;
+}
+a {
+  color: white;
+}
+
