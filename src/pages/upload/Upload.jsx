@@ -56,9 +56,9 @@ const Upload = () => {
 
   return (
     <div>
-    <div><img src={message} className="message"/></div>
+    
     <div className="upload-comp">
-      <div className='fridge' for="fileinput" onClick={processImage} style={{
+      <div className='fridge' onClick={processImage} style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
