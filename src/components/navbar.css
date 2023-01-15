@@ -1,5 +1,26 @@
 nav {
+  margin: 1rem;
   height: 5rem;
   width: 100vw;
   background: rgba(0, 0, 0, 0.167);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* shows only on medium and small screens 
+*/
+.nav_toggle-btn {
+  display: none;
+}
+
+.nav_container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
