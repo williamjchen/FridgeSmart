@@ -12,7 +12,7 @@ const Recipes = ({ingredients}) => {
   const fetchRecipe = (ingredients) => {
     let numResults = 2
   
-    let url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients.join(",+")}&number=${numResults}&sort=min-missing-ingredients&apiKey=${process.env.REACT_APP_SPOON_API_KEY}`
+    let url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients.join(",+")}&number=${numResults}&ranking=2&sort=min-missing-ingredients&apiKey=${process.env.REACT_APP_SPOON_API_KEY}`
     axios.get(url)
         .then(res => {
           const data = res.data
@@ -20,15 +20,17 @@ const Recipes = ({ingredients}) => {
           setRecipesList(data)
           console.log("hi")
         })
-  }  
+  }
   
   return (
     <div>
+      <p>{ingredients.join(",")}</p>
       {RecipesList.map(i => (
         <Recipe 
             name={i.title} 
             have={i.usedIngredients}
             missing={i.unusedIngredients}
+            id={i.id}
         />
     ))}
     </div>
