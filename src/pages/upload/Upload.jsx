@@ -6,24 +6,45 @@ import Recipes from '../recipes/Recipes'
 //import fs from 'fs'
 
 const Upload = () => {
-  const [RecipesList, setRecipesList] = useState([]);
+  const [RecipesList, setRecipesList] = useState([])
+  const [SelectedFile, setSelectedFile] = useState();
+  const [Base64IMG, setBase64IMG] = useState();
+
+
+  const handleFileChange = (e) => {
+    if (e.target.files) {
+      setSelectedFile(e.target.files[0]);
+    }
+  };
+
+  const convertToBase64 = () => {
+    const reader = new FileReader()
+
+    reader.readAsDataURL(SelectedFile)
+
+    reader.onload = () => {
+      console.log('called: ', reader)
+      setBase64IMG(reader.result)
+    }
+  }
 
   const processImage = () => {
-    // const image = fs.readFileSync("YOUR_IMAGE.jpg", {
-    //   encoding: "base64"
-    // })
+    convertToBase64()
     axios({
       method: "POST",
       url: "https://detect.roboflow.com/fridgesmart/1",
       params: {
-          api_key: process.env.REACT_APP_ROBO_API_KEY,
-          image: "https://i.imgur.com/6TTIhYL.jpeg"
+          api_key: process.env.REACT_APP_ROBO_API_KEY
+      },
+      data: Base64IMG,
+      headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
       }
     })
     .then(function(response) {
       let ingredients = []
       response.data.predictions.map((prediction) => (ingredients.push(prediction.class)))
-      console.log(ingredients)
+      ingredients = [...new Set(ingredients)]
       setRecipesList(RecipesList.concat(<Recipes ingredients={ingredients}/>))
     })
     .catch(function(error) {
@@ -33,6 +54,7 @@ const Upload = () => {
 
   return (
     <div className="upload-comp">
+      <input type="file" onChange={handleFileChange} />
       <button onClick={processImage}>upload</button>
       {RecipesList}
     </div>
