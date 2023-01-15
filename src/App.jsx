@@ -8,12 +8,10 @@ import Navbar from "./components/Navbar"
 
 const app = () => {
   return (
-    <div className="background">
-      <BrowserRouter>
-        <Navbar/>
-        <Recipe/>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Navbar/>
+      <Recipe/>
+    </BrowserRouter>
 
     
   )
