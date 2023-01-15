@@ -19,7 +19,7 @@ const Navbar = () => {
             
           </li>
           <li>
-            <NavLink to='./pages/recipes'><a href="" className="btn"><img className="logo2" src={Icon2}/><p>Upload Image</p></a></NavLink>
+            <NavLink to='./pages/recipes'><a href="#upload_id" className="btn"><img className="logo2" src={Icon2}/><p>Upload Image</p></a></NavLink>
           </li>
           <li>
             <NavLink to='./pages/recipes'><a href="" className="btn"><img className="logo3"src={Icon3}/><p className="header">Recipe</p></a></NavLink>
