@@ -62,3 +62,8 @@ nav {
 .nav_links p:hover {
   color: var(--color-secondary);
 }
+
+.nav_links img:hover {
+  color: var(--color-secondary);
+}
+

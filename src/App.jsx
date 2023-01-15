@@ -4,7 +4,7 @@ import './App.css';
 import Recipes from './pages/recipes/Recipes'
 import Navbar from "./components/Navbar"
 import Upload from './pages/upload/Upload'
-import Background from './components/Background'
+import Header from './components/Header'
 
 // import background from "./background.jpg";
 
@@ -13,6 +13,7 @@ const app = () => {
     <BrowserRouter>
       <Background/>
       <Navbar/>
+      <Header/>
       <Upload/>
     </BrowserRouter>
 
