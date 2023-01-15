@@ -5,10 +5,6 @@ import Recipes from '../recipes/Recipes'
 
 //import fs from 'fs'
 
-const Input = () => {
-  return <input placeholder="Your input here" />;
-};
-
 const Upload = () => {
   const [RecipesList, setRecipesList] = useState([]);
 

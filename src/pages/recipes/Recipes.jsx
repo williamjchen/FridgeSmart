@@ -7,7 +7,7 @@ const Recipes = ({ingredients}) => {
 
   useEffect(() => {
     fetchRecipe(ingredients)
-  })
+  }, [])
 
   const fetchRecipe = (ingredients) => {
     let numResults = 2

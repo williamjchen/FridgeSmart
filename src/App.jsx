@@ -15,8 +15,6 @@ const app = () => {
       <Header/>
       <Upload/>
     </BrowserRouter>
-
-    
   )
 }
 
