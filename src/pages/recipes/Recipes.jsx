@@ -1,4 +1,4 @@
-import './recipe.css'
+import Recipe from './Recipe';
 import axios from 'axios';
 
 const fetchRecipe = () => {
@@ -13,12 +13,18 @@ const fetchRecipe = () => {
       })
 }
 
-const Recipe = () => {
+const Recipes = ({ingredients}) => {
   return (
     <div>
-      <button onClick={fetchRecipe}>hmm</button>
+      {ingredients.map(i => (
+        <Recipe 
+            name={i.name} 
+            have={i.have}
+            missing={i.missing}
+        />
+    ))}
     </div>
   )
 }
 
-export default Recipe
+export default Recipes

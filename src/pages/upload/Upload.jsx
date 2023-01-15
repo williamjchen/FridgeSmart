@@ -15,7 +15,9 @@ const processImage = () => {
     }
   })
   .then(function(response) {
-      console.log(response.data);
+    let ingredients = []
+    response.data.predictions.map((prediction) => (ingredients.push(prediction.class)))
+    console.log(ingredients)
   })
   .catch(function(error) {
       console.log(error.message);
