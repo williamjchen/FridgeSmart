@@ -36,7 +36,7 @@ const Upload = () => {
   }
 
   return (
-    <div>
+    <div className="upload">
       <button onClick={processImage}>upload</button>
       {RecipesList}
     </div>
