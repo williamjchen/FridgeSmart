@@ -55,3 +55,10 @@ nav {
   align-items: center;
   gap: 4.5rem;
 }
+
+.nav_links p {
+  transition: var(--transition);
+}
+.nav_links p:hover {
+  color: var(--color-secondary);
+}
