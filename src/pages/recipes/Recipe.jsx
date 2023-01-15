@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import './recipes.css'
 
 const Recipe = ({name, have, missing, id}) => {
     const [RecipeLink, setRecipeLink] = useState("");
@@ -19,12 +20,12 @@ const Recipe = ({name, have, missing, id}) => {
 
     return (
     <div>
-        <h1>{name}</h1>
-        <p>{RecipeLink}</p>
-        <h2>have</h2>
-        {have.map(item => (<h3>{item.name}</h3>))}    
-        <h2>missing</h2>
-        {missing.map(item => (<h3>{item.name}</h3>))}        
+        <p className="name">{name}</p>
+        <p className="link">{RecipeLink}</p>
+        <p className="have">Have:</p>
+        {have.map(item => (<p className="item">{item.name}</p>))}    
+        <p className="missing">Missing:</p>
+        {missing.map(item => (<p className="item">{item.name}</p>))}        
     </div>
     )
 }

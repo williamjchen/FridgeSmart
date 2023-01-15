@@ -47,7 +47,7 @@ const Upload = () => {
       let ingredients = []
       response.data.predictions.map((prediction) => (ingredients.push(prediction.class)))
       ingredients = [...new Set(ingredients)]
-      setRecipesList(RecipesList.concat(<Recipes ingredients={ingredients}/>))
+      setRecipesList(<Recipes ingredients={ingredients}/>)
     })
     .catch(function(error) {
         console.log(error.message);
@@ -55,6 +55,7 @@ const Upload = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div>
     <div><img src={message} className="message"/></div>
     <div className="upload-comp">
@@ -65,6 +66,12 @@ const Upload = () => {
             height: '60vh',
             scale: '250%',
         }}>
+=======
+    <div className="upload-comp" id="upload_id">
+      <input type="file" onChange={handleFileChange} />
+      <button onClick={processImage}>upload</button>
+      <div className='fridge'>
+>>>>>>> 491b2d185e756770cc78d80528637cf932407866
       <Fridge/>
       </div>
       <label for="file-input" className='filelabel'>
