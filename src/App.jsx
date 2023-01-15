@@ -3,6 +3,7 @@ import './App.css';
 
 import Recipe from './pages/recipe/Recipe'
 import Navbar from "./components/Navbar"
+import Upload from './pages/upload/Upload'
 
 // import background from "./background.jpg";
 
@@ -10,7 +11,6 @@ const app = () => {
   return (
     <BrowserRouter>
       <Navbar/>
-      
     </BrowserRouter>
 
     
