@@ -13,6 +13,11 @@ nav {
   border-radius: 40px;
 }
 
+.main-logo {
+  height: 7rem;
+  margin-right: -10rem;
+}
+
 /* shows only on medium and small screens 
 */
 .nav_toggle-btn {
@@ -30,10 +35,7 @@ nav {
   display: flex;
   gap: 1rem;
 }
-.title {
-  font-size: 25px;
-  
-}
+
 .logo1 {
   height: 33px;
   margin-top: 1px;
